@@ -17,7 +17,7 @@ jobs:
           dotnet-version: '8.0.x' # or 7.0.x if using .NET 7
 
       - name: Publish
-        run: dotnet publish src/AboutMe/UI/UI.csproj -c Release -o release
+        run: dotnet publish UI/UI.csproj -c Release -o release
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
