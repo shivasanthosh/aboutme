@@ -1,27 +1,43 @@
 html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #f3f3f4;
+    scroll-behavior: smooth;
 }
 
-h1:focus {
-    outline: none;
+/* Landing page styles */
+.landing-page {
+    background-color: #f3f3f4;
 }
 
-a, .btn-link {
-    color: #0071c1;
+.header-content {
+    padding: 120px 0 60px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e7eaec;
 }
 
-.btn-primary {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
+/* Navigation */
+.navbar-fixed-top {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e7eaec;
+    transition: all 0.3s ease-in-out;
+    padding: 15px 0;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+.navbar-fixed-top.navbar-scroll {
+    padding: 15px 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.content {
-    padding-top: 1.1rem;
+.nav-link {
+    color: #676a6c !important;
+    font-weight: 500;
+    padding: 15px !important;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #1ab394 !important;
 }
 
 .valid.modified:not([type=checkbox]) {
@@ -98,6 +114,184 @@ a, .btn-link {
 
     .loading-progress-text:after {
         content: var(--blazor-load-percentage-text, "Loading");
+}
+
+/* Content sections */
+.wrapper-content {
+    padding: 40px 0;
+}
+
+.ibox {
+    margin-bottom: 25px;
+    background-color: #ffffff;
+    border: 1px solid #e7eaec;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+.ibox:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ibox-title {
+    padding: 15px;
+    border-bottom: 1px solid #e7eaec;
+}
+
+.ibox-title h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #676a6c;
+}
+
+.ibox-content {
+    padding: 20px;
+}
+
+/* Timeline */
+.timeline-item {
+    padding: 20px 0;
+    border-left: 2px solid #e7eaec;
+    position: relative;
+}
+
+.timeline-item .date {
+    text-align: right;
+    padding-right: 20px;
+    color: #1ab394;
+}
+
+.timeline-item .content {
+    padding-left: 20px;
+    border-left: 2px solid #1ab394;
+    margin-left: -2px;
+}
+
+/* Widgets */
+.widget {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+.widget:hover {
+    transform: translateY(-2px);
+}
+
+.widget-text-box {
+    padding: 20px;
+    border: 1px solid #e7eaec;
+    background: #ffffff;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+/* Colors */
+.navy-bg {
+    background-color: #1ab394;
+    color: #ffffff;
+}
+
+.lazur-bg {
+    background-color: #23c6c8;
+    color: #ffffff;
+}
+
+.yellow-bg {
+    background-color: #f8ac59;
+    color: #ffffff;
+}
+
+.red-bg {
+    background-color: #ed5565;
+    color: #ffffff;
+}
+
+/* Contact section */
+.contact-box {
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #ffffff;
+    border: 1px solid #e7eaec;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.circle-border {
+    border: 6px solid #ffffff;
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.5);
+}
+
+/* Social icons */
+.social-icon a {
+    background: #ffffff;
+    color: #676a6c;
+    padding: 8px 10px;
+    display: inline-block;
+    border-radius: 4px;
+    margin: 0 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-icon a:hover {
+    background: #1ab394;
+    color: #ffffff;
+}
+
+/* Animations */
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInDown {
+    animation-name: fadeInDown;
+}
+
+/* Footer */
+.footer {
+    background: #ffffff;
+    padding: 20px 0;
+    border-top: 1px solid #e7eaec;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-content {
+        padding: 60px 0 30px;
+    }
+    
+    .timeline-item .date {
+        text-align: left;
+        padding-bottom: 10px;
+    }
+    
+    .widget {
+        margin-bottom: 15px;
+    }
+    
+    .contact-box {
+        margin-bottom: 15px;
+    }
+}
     }
 
 code {
