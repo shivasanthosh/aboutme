@@ -31,7 +31,7 @@
     document.addEventListener("DOMContentLoaded", function () {
         const baseTag = document.querySelector("base");
         if (baseTag) {
-            const isLocal = window.location.hostname === "localhost" || window.location.protocol === "file:";
+            const isLocal = window.location.hostname === "localhost";
             baseTag.setAttribute("href", isLocal ? "/" : "/aboutme/");
         }
     });
