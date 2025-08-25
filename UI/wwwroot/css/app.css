@@ -245,6 +245,97 @@ html, body {
     color: #ffffff;
 }
 
+/* Product boxes for achievements */
+.product-box {
+    padding: 0;
+    border: 1px solid #e7eaec;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.product-box:hover,
+.product-box.active {
+    border: 1px solid transparent;
+    box-shadow: 0 3px 7px 0 #a8a8a8;
+    transform: translateY(-3px);
+}
+
+.product-imitation {
+    text-align: center;
+    padding: 90px 0;
+    background-color: #f8f8f9;
+    color: #bebec3;
+    font-weight: 600;
+}
+
+.product-imitation i {
+    transition: transform 0.3s ease;
+}
+
+.product-box:hover .product-imitation i {
+    transform: scale(1.1);
+}
+
+.product-desc {
+    padding: 20px;
+    position: relative;
+}
+
+.product-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #676a6c;
+    display: block;
+    margin: 2px 0 5px 0;
+}
+
+.product-price {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #1ab394;
+    padding: 6px 12px;
+    position: absolute;
+    top: -32px;
+    right: 0;
+}
+
+/* Modal styles */
+.modal-backdrop {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.modal-header {
+    border-bottom: 1px solid #e7eaec;
+    padding: 15px;
+}
+
+.modal-title {
+    color: #676a6c;
+    margin: 0;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.close {
+    font-size: 21px;
+    font-weight: 700;
+    color: #000;
+    opacity: .2;
+    transition: opacity 0.3s ease;
+}
+
+.close:hover {
+    opacity: .5;
+}
+
 /* Animations */
 .animated {
     animation-duration: 1s;
