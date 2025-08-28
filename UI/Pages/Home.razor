@@ -87,24 +87,152 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="widget style1 red-bg">
-                            <div class="row vertical-align">
-                                <div class="col-3">
-                                    <i class="fa fa-award fa-3x"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4" id="certifications">
+    <div class="col-lg-12">
+        <div class="ibox">
+            <div class="ibox-title">
+                <h2><i class="fa fa-certificate"></i> Professional Certifications</h2>
+            </div>
+            <div class="ibox-content">
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <div class="certification-card">
+                            <div class="text-center">
+                                <div class="certificate-image-container" style="cursor: pointer;" @onclick="@(() => ShowImageModal("Images/Az400.png", "Azure DevOps Engineer Expert"))">
+                                    <img src="Images/Az400.png" alt="Azure DevOps Engineer Expert" class="img-fluid mb-3" style="max-height: 200px;" />
+                                    <div class="image-overlay">
+                                        <i class="fa fa-search-plus fa-2x text-white"></i>
+                                    </div>
                                 </div>
-                                <div class="col-9 text-right">
-                                    <h3 class="font-bold">Certifications</h3>
+                                <h4>Azure DevOps Engineer Expert</h4>
+                                <p class="text-muted">AZ-400</p>
+                                <div class="cert-details mt-3">
+                                    <ul class="list-unstyled">
+                                        <li><i class="fa fa-check text-navy"></i> CI/CD Implementation</li>
+                                        <li><i class="fa fa-check text-navy"></i> Infrastructure as Code</li>
+                                        <li><i class="fa fa-check text-navy"></i> Security & Compliance</li>
+                                    </ul>
+                                    <div class="mt-3">
+                                        <button @onclick="@(() => NavigateToCertificate("az400"))" class="btn btn-sm btn-primary">
+                                            View Details
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="widget-text-box">
-                            <ul class="list-unstyled">
-                                <li><i class="fa fa-certificate text-danger"></i> AZ-400</li>
-                                <li><i class="fa fa-certificate text-danger"></i> AZ-204</li>
-                                <li><i class="fa fa-certificate text-danger"></i> AZ-900</li>
-                                <li><i class="fa fa-certificate text-danger"></i> SAFe® 6.0</li>
-                            </ul>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="certification-card">
+                            <div class="text-center">
+                                <div class="certificate-image-container" style="cursor: pointer;" @onclick="@(() => ShowImageModal("Images/az204.png", "Azure Developer Associate"))">
+                                    <img src="Images/az204.png" alt="Azure Developer Associate" class="img-fluid mb-3" style="max-height: 200px;" />
+                                    <div class="image-overlay">
+                                        <i class="fa fa-search-plus fa-2x text-white"></i>
+                                    </div>
+                                </div>
+                                <h4>Azure Developer Associate</h4>
+                                <p class="text-muted">AZ-204</p>
+                                <div class="cert-details mt-3">
+                                    <ul class="list-unstyled">
+                                        <li><i class="fa fa-check text-navy"></i> Cloud Solutions Development</li>
+                                        <li><i class="fa fa-check text-navy"></i> Azure Services Integration</li>
+                                        <li><i class="fa fa-check text-navy"></i> Serverless Computing</li>
+                                    </ul>
+                                    <div class="mt-3">
+                                        <button @onclick="@(() => NavigateToCertificate("az204"))" class="btn btn-sm btn-primary">
+                                            View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="certification-card">
+                            <div class="text-center">
+                                <div class="certificate-image-container" style="cursor: pointer;" @onclick="@(() => ShowImageModal("Images/Az900.png", "Azure Fundamentals"))">
+                                    <img src="Images/Az900.png" alt="Azure Fundamentals" class="img-fluid mb-3" style="max-height: 200px;" />
+                                    <div class="image-overlay">
+                                        <i class="fa fa-search-plus fa-2x text-white"></i>
+                                    </div>
+                                </div>
+                                <h4>Azure Fundamentals</h4>
+                                <p class="text-muted">AZ-900</p>
+                                <div class="cert-details mt-3">
+                                    <ul class="list-unstyled">
+                                        <li><i class="fa fa-check text-navy"></i> Cloud Concepts</li>
+                                        <li><i class="fa fa-check text-navy"></i> Azure Services</li>
+                                        <li><i class="fa fa-check text-navy"></i> Security & Privacy</li>
+                                    </ul>
+                                    <div class="mt-3">
+                                        <button @onclick="@(() => NavigateToCertificate("az900"))" class="btn btn-sm btn-primary">
+                                            View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 mb-4">
+                        <div class="certification-card">
+                            <div class="text-center">
+                                <div class="certificate-image-container" style="cursor: pointer;" @onclick="@(() => ShowImageModal("Images/DeloitteAiAcademyEPDataAnalyst.png", "Deloitte AI Academy"))">
+                                    <img src="Images/DeloitteAiAcademyEPDataAnalyst.png" alt="Deloitte AI Academy" class="img-fluid mb-3" style="max-height: 200px;" />
+                                    <div class="image-overlay">
+                                        <i class="fa fa-search-plus fa-2x text-white"></i>
+                                    </div>
+                                </div>
+                                <h4>Deloitte AI Academy</h4>
+                                <p class="text-muted">Data Analyst</p>
+                                <div class="cert-details mt-3">
+                                    <p class="text-muted small mb-2">Successfully completed the Deloitte AI Academy™ Experienced Professionals Program</p>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fa fa-check text-navy"></i> Data extraction and organization with SQL</li>
+                                        <li><i class="fa fa-check text-navy"></i> Data manipulation, analysis, and visualization with Python</li>
+                                        <li><i class="fa fa-check text-navy"></i> Statistical inference and exploratory data analysis</li>
+                                        <li><i class="fa fa-check text-navy"></i> Data hygiene</li>
+                                    </ul>
+                                    <div class="mt-3">
+                                        <button @onclick="@(() => NavigateToCertificate("deloitte-ai"))" class="btn btn-sm btn-primary">
+                                            View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="certification-card">
+                            <div class="text-center">
+                                <div class="certificate-image-container" style="cursor: pointer;" @onclick="@(() => ShowImageModal("Images/Safe6.png", "SAFe 6.0 Practitioner"))">
+                                    <img src="Images/Safe6.png" alt="SAFe 6.0 Practitioner" class="img-fluid mb-3" style="max-height: 200px;" />
+                                    <div class="image-overlay">
+                                        <i class="fa fa-search-plus fa-2x text-white"></i>
+                                    </div>
+                                </div>
+                                <h4>SAFe® 6.0 Practitioner</h4>
+                                <p class="text-muted">Scaled Agile Framework</p>
+                                <div class="cert-details mt-3">
+                                    <ul class="list-unstyled">
+                                        <li><i class="fa fa-check text-navy"></i> Agile Practices</li>
+                                        <li><i class="fa fa-check text-navy"></i> Program Increment Planning</li>
+                                        <li><i class="fa fa-check text-navy"></i> Team & Technical Agility</li>
+                                    </ul>
+                                    <div class="mt-3">
+                                        <button @onclick="@(() => NavigateToCertificate("safe6"))" class="btn btn-sm btn-primary">
+                                            View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

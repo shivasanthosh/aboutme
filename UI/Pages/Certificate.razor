@@ -1,0 +1,51 @@
+@page "/certificate/{Id}"
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox">
+            <div class="ibox-title d-flex justify-content-between align-items-center">
+                <h2><i class="fa fa-certificate"></i> @CertificateDetails.Title</h2>
+                <a href="/" class="btn btn-white">
+                    <i class="fa fa-arrow-left"></i> Back
+                </a>
+            </div>
+            <div class="ibox-content">
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2">
+                        <div class="text-center mb-4">
+                            <img src="@CertificateDetails.ImageUrl" alt="@CertificateDetails.Title" class="img-fluid rounded shadow-sm" />
+                        </div>
+                        <div class="certificate-details">
+                            <h3 class="mb-3">@CertificateDetails.Title</h3>
+                            <p class="text-muted">@CertificateDetails.Subtitle</p>
+                            
+                            @if (CertificateDetails.Description != null)
+                            {
+                                <p class="mb-4">@CertificateDetails.Description</p>
+                            }
+
+                            <div class="skills-section">
+                                <h4 class="mb-3">Key Skills & Competencies</h4>
+                                <ul class="list-unstyled">
+                                    @foreach (var skill in CertificateDetails.Skills)
+                                    {
+                                        <li class="mb-2"><i class="fa fa-check text-navy"></i> @skill</li>
+                                    }
+                                </ul>
+                            </div>
+
+                            @if (CertificateDetails.CredlyUrl != null)
+                            {
+                                <div class="mt-4">
+                                    <a href="@CertificateDetails.CredlyUrl" target="_blank" class="btn btn-primary">
+                                        <i class="fa fa-award"></i> Verify on Credly
+                                    </a>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

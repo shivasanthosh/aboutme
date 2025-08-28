@@ -52,3 +52,11 @@
         collapseNavMenu = !collapseNavMenu;
     }
 }
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}
