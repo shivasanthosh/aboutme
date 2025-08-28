@@ -44,6 +44,6 @@ public partial class Home
 
     private void NavigateToCertificate(string certificateId)
     {
-        NavigationManager.NavigateTo($"/certificate/{certificateId}");
+        NavigationManager.NavigateTo($"/aboutme/certificate/{certificateId}");
     }
 }
