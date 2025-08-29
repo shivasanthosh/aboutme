@@ -17,7 +17,7 @@ public partial class Certificate
             {
                 Title = "Azure DevOps Engineer Expert",
                 Subtitle = "AZ-400",
-                ImageUrl = "/Images/Az400.png",
+                ImageUrl = "/aboutme/Images/Az400.png",
                 Description = "Microsoft Certified: Azure DevOps Engineer Expert certification validates the skills and knowledge required to design and implement DevOps practices for Azure.",
                 Skills = new[]
                 {
@@ -35,7 +35,7 @@ public partial class Certificate
             {
                 Title = "Azure Developer Associate",
                 Subtitle = "AZ-204",
-                ImageUrl = "/Images/az204.png",
+                ImageUrl = "/aboutme/Images/az204.png",
                 Description = "Microsoft Certified: Azure Developer Associate certification demonstrates your ability to design, build, test, and maintain cloud solutions.",
                 Skills = new[]
                 {
@@ -52,7 +52,7 @@ public partial class Certificate
             {
                 Title = "Azure Fundamentals",
                 Subtitle = "AZ-900",
-                ImageUrl = "/Images/Az900.png",
+                ImageUrl = "/aboutme/Images/Az900.png",
                 Description = "Microsoft Certified: Azure Fundamentals validates foundational knowledge of cloud services and how those services are provided with Microsoft Azure.",
                 Skills = new[]
                 {
@@ -67,7 +67,7 @@ public partial class Certificate
             {
                 Title = "Deloitte AI Academy",
                 Subtitle = "EP Data Analyst",
-                ImageUrl = "/Images/DeloitteAiAcademyEPDataAnalyst.png",
+                ImageUrl = "/aboutme/Images/DeloitteAiAcademyEPDataAnalyst.png",
                 Description = "Successfully completed the Deloitte AI Academy™ Experienced Professionals Program: Data Analyst",
                 Skills = new[]
                 {
@@ -82,7 +82,7 @@ public partial class Certificate
             {
                 Title = "SAFe® 6.0 Practitioner",
                 Subtitle = "Scaled Agile Framework",
-                ImageUrl = "/Images/Safe6.png",
+                ImageUrl = "/aboutme/Images/Safe6.png",
                 Description = "Certified SAFe® 6.0 Practitioner with expertise in implementing Agile practices at enterprise scale.",
                 Skills = new[]
                 {
