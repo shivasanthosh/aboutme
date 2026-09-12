@@ -15,9 +15,12 @@
             <span class="prompt">&gt;</span>dotnet add package @CertificateDetails.PackageId --version @CertificateDetails.Version
         </div>
 
-        <div class="text-center">
-            <img src="@CertificateDetails.ImageUrl" alt="@CertificateDetails.Title" class="readme-image" />
-        </div>
+        @if (!string.IsNullOrEmpty(CertificateDetails.ImageUrl))
+        {
+            <div class="text-center">
+                <img src="@CertificateDetails.ImageUrl" alt="@CertificateDetails.Title" class="readme-image" />
+            </div>
+        }
 
         <h1 class="readme-title">@CertificateDetails.Title</h1>
         <p class="readme-subtitle">@CertificateDetails.Subtitle</p>
@@ -42,7 +45,7 @@
         {
             <p class="readme-section-label">## Verify</p>
             <div class="package-cmd">
-                <span class="prompt">&gt;</span><a href="@CertificateDetails.CredlyUrl" target="_blank">dotnet nuget verify --source credly</a>
+                <span class="prompt">&gt;</span><a href="@CertificateDetails.CredlyUrl" target="_blank">dotnet nuget verify --signature</a>
             </div>
         }
     </div>

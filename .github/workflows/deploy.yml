@@ -24,6 +24,20 @@ jobs:
       - name: Rewrite base href for GitHub Pages
         run: sed -i 's|<base href="/" />|<base href="/aboutme/" />|' release/wwwroot/index.html release/wwwroot/404.html
 
+      # Compiles resume/base/*.tex with XeLaTeX (this template requires it; no local
+      # LaTeX toolchain is expected — see resume/README.md). Only the general-purpose
+      # base resume is ever published; tailored/* resumes stay artifact-only, see
+      # tailor-resume.yml.
+      - name: Compile resume PDF
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: ShivaSanthoshKumar-Resume.tex
+          working_directory: resume/base
+          compiler: xelatex
+
+      - name: Add resume to site
+        run: cp resume/base/ShivaSanthoshKumar-Resume.pdf release/wwwroot/resume.pdf
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
