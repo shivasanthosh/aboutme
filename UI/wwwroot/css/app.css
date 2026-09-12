@@ -506,6 +506,28 @@ h1:focus-visible {
     color: var(--cyan);
 }
 
+/* Role-scoped impact numbers — deliberately separate from the hero's
+   career-wide .stats-strip so a reader never mistakes one role's metrics
+   for a fact about the candidate overall. */
+.commit-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 10px 16px;
+    margin: 10px 0 16px;
+    padding: 12px 14px;
+    background: var(--bg-inset);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.commit-stats .stat-value {
+    font-size: 1.15rem;
+}
+
+.commit-stats .stat-label {
+    font-size: 0.72rem;
+}
+
 /* ---------------------------------------------------------------------
    Projects — repo cards
    --------------------------------------------------------------------- */

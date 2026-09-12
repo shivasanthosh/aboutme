@@ -28,6 +28,13 @@ public partial class Home
         NavigationManager.NavigateTo($"certificate/{certificateId}");
     }
 
+    /// <summary>Career start — first day at Cognizant. Recomputed against the
+    /// viewer's own clock on every page load, so this never goes stale.</summary>
+    private static readonly DateTime CareerStart = new(2019, 12, 31);
+
+    private static string YearsExperience
+        => $"{(DateTime.Today - CareerStart).TotalDays / 365.25:0.0}+";
+
     /// <summary>
     /// Add a new project here — the grid renders whatever this list contains,
     /// featured ones first. No markup changes needed elsewhere.
