@@ -116,8 +116,9 @@ public partial class Certificate
                     "Project Planning & Scheduling",
                     "Risk Management",
                     "Stakeholder Management"
-                },
-                CredlyUrl = "https://cognizant.udemy.com/certificate/UC-28ac103f-4380-4c63-8c04-bd996ede7a38/"
+                }
+                // No CredlyUrl: the certificate lives behind Cognizant's SSO-gated
+                // Udemy Business portal, not a publicly verifiable link.
             },
             _ => throw new ArgumentException($"Certificate with ID '{Id}' not found.")
         };

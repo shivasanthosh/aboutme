@@ -253,8 +253,58 @@ button {
     font-family: var(--font-ui);
     color: var(--text-muted);
     font-size: 1.05rem;
-    margin: 0 0 0 48px;
+    margin: 0 0 20px 48px;
     max-width: 640px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 0 0 28px 48px;
+}
+
+.btn-ide.btn-primary {
+    color: var(--bg);
+    background: var(--cyan);
+    border-color: var(--cyan);
+    font-weight: 600;
+}
+
+.btn-ide.btn-primary:hover {
+    background: #6fd9c4;
+}
+
+.stats-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 18px;
+    margin: 0 0 4px 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+
+.stat-value {
+    display: block;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--cyan);
+    line-height: 1.2;
+}
+
+.stat-label {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    margin-top: 2px;
+}
+
+/* Highlights a number/metric inline within prose (journey bullets, project
+   descriptions) so results don't get lost in a wall of body text. */
+.stat-inline {
+    color: var(--cyan);
+    font-weight: 600;
 }
 
 /* FocusOnNavigate lands keyboard/AT focus on the page's h1 on route change;
@@ -865,7 +915,7 @@ h1:focus-visible {
         padding: 20px;
     }
 
-    .hero-name, .hero-tagline {
+    .hero-name, .hero-tagline, .hero-actions, .stats-strip {
         margin-left: 0;
     }
 
