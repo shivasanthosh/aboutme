@@ -14,10 +14,15 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '9.0.x' 
+          dotnet-version: '9.0.x'
 
       - name: Publish
         run: dotnet publish UI/UI.csproj -c Release -o release
+
+      # Source uses base href "/" so `dotnet run` works locally;
+      # GitHub Pages serves the site under /aboutme/.
+      - name: Rewrite base href for GitHub Pages
+        run: sed -i 's|<base href="/" />|<base href="/aboutme/" />|' release/wwwroot/index.html release/wwwroot/404.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
