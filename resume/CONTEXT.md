@@ -44,6 +44,7 @@ App), Azure OpenAI Service, Blazor-based chatbot UX
 | AZ-900 — Azure Fundamentals | Microsoft | https://www.credly.com/badges/2a82bf49-fe81-4faf-a22a-2ba87fefda26 |
 | SAFe® for Teams 6.0 | Scaled Agile | https://www.credly.com/earner/earned/badge/61123942-a068-45e5-98be-1f078245a222 |
 | Deloitte AI Academy — EP Data Analyst | Deloitte | — |
+| Deloitte Data Science Essentials (DSE) Program Capstone | Deloitte / DataCamp | — (certificate B0011210283880, no public verify link) |
 | Project Management Course | Udemy (via Cognizant) | — (behind Cognizant's SSO-gated Udemy Business portal, not publicly verifiable) |
 
 ## Education

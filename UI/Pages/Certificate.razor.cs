@@ -86,6 +86,24 @@ public partial class Certificate
                     "Enterprise AI Solutions Implementation"
                 }
             },
+            "dse-capstone" => new CertificateDetail
+            {
+                Title = "Data Science Essentials (DSE) Program Capstone",
+                Subtitle = "Deloitte, via DataCamp",
+                PackageId = "Deloitte.DataScienceEssentials.Capstone",
+                Version = "1.0.0",
+                ImageUrl = "Images/DeloitteDataScienceEssentialsCapstone.png",
+                Description = "Awarded the Deloitte Data Science Essentials (DSE) Program Capstone Certification by DataCamp — a 45-hour self-paced program.",
+                Skills = new[]
+                {
+                    "Data Analysis with Python",
+                    "SQL & Data Manipulation",
+                    "Statistical Analysis",
+                    "Data Visualization",
+                    "Capstone Project Delivery"
+                }
+                // No CredlyUrl: certificate B0011210283880 has no public verify link.
+            },
             "safe6" => new CertificateDetail
             {
                 Title = "SAFe® 6.0 Practitioner",
