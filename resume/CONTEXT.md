@@ -13,7 +13,7 @@ Last reviewed: 2026-09-12.
 
 ## Profile
 
-Senior Developer (5.8+ yrs) specializing in Azure Cloud, data engineering and applied AI.
+Senior Developer (career start **2019-12-31** — the website computes "years experience" live off this date; a resume is a snapshot, so update its hardcoded figure by hand when you next touch it) specializing in Azure Cloud, data engineering and applied AI.
 Certified Azure DevOps Engineer Expert. Track record of shipping production data platforms
 and the AI experiences built on top of them. Go-to languages: **C#** and **Python**.
 
@@ -44,16 +44,16 @@ App), Azure OpenAI Service, Blazor-based chatbot UX
 | AZ-900 — Azure Fundamentals | Microsoft | https://www.credly.com/badges/2a82bf49-fe81-4faf-a22a-2ba87fefda26 |
 | SAFe® for Teams 6.0 | Scaled Agile | https://www.credly.com/earner/earned/badge/61123942-a068-45e5-98be-1f078245a222 |
 | Deloitte AI Academy — EP Data Analyst | Deloitte | — |
-| Project Management Course | Udemy (via Cognizant) | https://cognizant.udemy.com/certificate/UC-28ac103f-4380-4c63-8c04-bd996ede7a38/ |
+| Project Management Course | Udemy (via Cognizant) | — (behind Cognizant's SSO-gated Udemy Business portal, not publicly verifiable) |
 
 ## Education
 
-- **Scaler Academy** — Software Development Course — May 2022 – Present — Karnataka
+- **Scaler Academy** — Software Development Course — May 2022 – May 2024 — Karnataka
 - **Kongu Engineering College** — BE, Electronics and Communication Engineering — Jul 2015 – Jul 2019 — Tamil Nadu
 
 ## Experience
 
-### Senior Developer — Deloitte USI (Apr 2023 – Present, Bangalore, 2.5 yrs)
+### Senior Developer — Deloitte USI (Apr 2023 – Present, Bangalore — ongoing, so its "X yrs" grows; update by hand when touching a resume)
 
 - Engineered scalable solutions to scan **3.5M+ cloud resources daily**, with automated
   misconfiguration detection that identified and remediated **243K+ issues**, delivering
