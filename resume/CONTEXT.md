@@ -127,6 +127,8 @@ Tags: `wpf` `xaml` `filemaker-api`
 
 ## Achievements
 
+- **Applause Award — 2026:** for contributions to GISCO, recognized for going the extra mile.
+  ([PDF](../UI/wwwroot/data/ApplauseAward2026.pdf))
 - **Spot Award — 2025:** for leading the design of a core API and enabling scalable
   integration. ([PDF](../UI/wwwroot/data/SpotAward2025.pdf))
 - **Applause Award — 2024:** for improving system reliability with flawless features,
