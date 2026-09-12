@@ -112,10 +112,13 @@
                 <h3 class="commit-title">Senior Developer</h3>
                 <p class="commit-org">Deloitte USI</p>
                 <ul class="commit-body">
-                    <li>Built an enterprise data platform on Microsoft Fabric/OneLake — 10+ sources normalized through a medallion architecture, feeding 15+ Power BI reports</li>
+                    <li>Built an enterprise lakehouse on Microsoft Fabric/OneLake — 10+ sources normalized through a medallion architecture, feeding 15+ Power BI reports</li>
                     <li>Shipped an AI data assistant: MCP over Azure Functions plus an AWS Bedrock-backed Blazor chatbot for querying the gold layer</li>
-                    <li>Engineered cloud resource scanning across 3.5M+ resources</li>
-                    <li>Led cloud migration with 40% faster timeline; reduced manual workload by 60% through automation</li>
+                    <li>Engineered cloud resource scanning across 3.5M+ resources daily, with automated misconfiguration detection identifying and remediating 243K+ issues</li>
+                    <li>Led migration of legacy platforms to managed Azure environments with IaC — 40% faster timeline, zero downtime</li>
+                    <li>Built a RESTful Exception Management API, cutting manual workload by 60%</li>
+                    <li>Configured Azure API Management to securely expose platform data, boosting API adoption by 25%</li>
+                    <li>Established automated integration tests and CI/CD pipelines, reducing production defects by 30%</li>
                 </ul>
                 <p class="commit-stack"><span class="key">stack:</span> .NET 9, CQRS, Azure, Fabric, PySpark, Terraform, Blazor, AWS Bedrock</p>
             </div>
@@ -171,6 +174,10 @@
                     {
                         <p class="repo-note">@project.Note</p>
                     }
+                    @if (project.Url != null)
+                    {
+                        <a href="@project.Url.Value.Href" target="_blank" class="package-link">@project.Url.Value.Label →</a>
+                    }
                     <div class="repo-tags">
                         @foreach (var tag in project.Tags)
                         {
@@ -225,7 +232,36 @@
                 <p class="package-desc">SAFe® 6.0 — Agile practices, PI planning, built-in quality at enterprise scale.</p>
                 <span class="package-link">View package →</span>
             </div>
+            <div class="package-card" @onclick="@(() => NavigateToCertificate("pm-course"))">
+                <div class="package-header"><i class="fa fa-box"></i><span class="package-name">ProjectManagement.Fundamentals</span><span class="package-version">v1.0.0</span></div>
+                <div class="package-cmd"><span class="prompt">&gt;</span>dotnet add package ProjectManagement.Fundamentals</div>
+                <p class="package-desc">Planning &amp; scheduling, risk management, stakeholder management — via Cognizant.</p>
+                <span class="package-link">View package →</span>
+            </div>
         </div>
+    </div>
+</div>
+
+<!-- ============================================================ Education ============================================================ -->
+<div class="ide-window" id="education">
+    <div class="ide-titlebar">
+        <div class="ide-dots">
+            <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+        </div>
+        <div class="ide-tabs">
+            <span class="ide-tab active"><i class="fa fa-file-code"></i> education.yaml</span>
+        </div>
+    </div>
+    <div class="ide-body code-block">
+        <div class="code-line"><span class="ln">1</span><span class="key">-</span> <span class="key">institution:</span> <span class="str">"Scaler Academy"</span></div>
+        <div class="code-line"><span class="ln">2</span>&nbsp;&nbsp;<span class="key">program:</span> <span class="str">"Software Development Course"</span></div>
+        <div class="code-line"><span class="ln">3</span>&nbsp;&nbsp;<span class="key">duration:</span> <span class="str">"May 2022 – Present"</span></div>
+        <div class="code-line"><span class="ln">4</span>&nbsp;&nbsp;<span class="key">location:</span> <span class="str">"Karnataka"</span></div>
+        <div class="code-line"><span class="ln">5</span>&nbsp;</div>
+        <div class="code-line"><span class="ln">6</span><span class="key">-</span> <span class="key">institution:</span> <span class="str">"Kongu Engineering College"</span></div>
+        <div class="code-line"><span class="ln">7</span>&nbsp;&nbsp;<span class="key">program:</span> <span class="str">"BE, Electronics &amp; Communication Engineering"</span></div>
+        <div class="code-line"><span class="ln">8</span>&nbsp;&nbsp;<span class="key">duration:</span> <span class="str">"Jul 2015 – Jul 2019"</span></div>
+        <div class="code-line"><span class="ln">9</span>&nbsp;&nbsp;<span class="key">location:</span> <span class="str">"Tamil Nadu"</span></div>
     </div>
 </div>
 
@@ -299,11 +335,12 @@
         <div class="code-line"><span class="ln">1</span><span class="key">name:</span> <span class="str">"Shivasanthoshkumar Sivakumar"</span></div>
         <div class="code-line"><span class="ln">2</span><span class="key">role:</span> <span class="str">"Senior Developer — Cloud, Data &amp; AI"</span></div>
         <div class="code-line"><span class="ln">3</span><span class="key">status:</span> <span class="str">"open_to_opportunities"</span></div>
-        <div class="code-line"><span class="ln">4</span><span class="key">email:</span> <a class="str" href="mailto:shivasanthosh531@gmail.com">"shivasanthosh531@gmail.com"</a></div>
-        <div class="code-line"><span class="ln">5</span><span class="key">phone:</span> <a class="str" href="tel:+919543493454">"+91-95434-93454"</a></div>
-        <div class="code-line"><span class="ln">6</span><span class="key">linkedin:</span> <a class="str" href="https://linkedin.com/in/shivasanthoshkumar" target="_blank">"linkedin.com/in/shivasanthoshkumar"</a></div>
-        <div class="code-line"><span class="ln">7</span><span class="key">github:</span> <a class="str" href="https://github.com/shivasanthosh" target="_blank">"github.com/shivasanthosh"</a></div>
-        <div class="code-line"><span class="ln">8</span><span class="key">scaler:</span> <a class="str" href="https://shivasanthoshkumar.scaler.com" target="_blank">"shivasanthoshkumar.scaler.com"</a></div>
-        <div class="code-line"><span class="ln">9</span><span class="key">credly:</span> <a class="str" href="https://www.credly.com/users/shivasanthoshkumar" target="_blank">"credly.com/users/shivasanthoshkumar"</a></div>
+        <div class="code-line"><span class="ln">4</span><span class="key">resume:</span> <a class="str" href="resume.pdf" target="_blank">"resume.pdf"</a></div>
+        <div class="code-line"><span class="ln">5</span><span class="key">email:</span> <a class="str" href="mailto:shivasanthosh531@gmail.com">"shivasanthosh531@gmail.com"</a></div>
+        <div class="code-line"><span class="ln">6</span><span class="key">phone:</span> <a class="str" href="tel:+919543493454">"+91-95434-93454"</a></div>
+        <div class="code-line"><span class="ln">7</span><span class="key">linkedin:</span> <a class="str" href="https://linkedin.com/in/shivasanthoshkumar" target="_blank">"linkedin.com/in/shivasanthoshkumar"</a></div>
+        <div class="code-line"><span class="ln">8</span><span class="key">github:</span> <a class="str" href="https://github.com/shivasanthosh" target="_blank">"github.com/shivasanthosh"</a></div>
+        <div class="code-line"><span class="ln">9</span><span class="key">scaler:</span> <a class="str" href="https://shivasanthoshkumar.scaler.com" target="_blank">"shivasanthoshkumar.scaler.com"</a></div>
+        <div class="code-line"><span class="ln">10</span><span class="key">credly:</span> <a class="str" href="https://www.credly.com/users/shivasanthoshkumar" target="_blank">"credly.com/users/shivasanthoshkumar"</a></div>
     </div>
 </div>

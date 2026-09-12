@@ -53,9 +53,10 @@ public partial class Home
             Name: "SmartSeller",
             Icon: "fa-mobile-screen",
             Org: null,
-            Description: "Multi-platform order automation: a console app processing multi-order flows via Flipkart Seller APIs, plus a Xamarin.Forms mobile app for order tracking.",
+            Description: "Multi-platform order automation: a console app automating multi-order processing via Flipkart Seller APIs (3x faster, 40% increase in annual sales), plus a Xamarin.Forms mobile app for order tracking.",
             Tags: new[] { "csharp", "dotnet-core", "xamarin" },
-            Featured: false),
+            Featured: false,
+            Url: ("README & demos", "https://github.com/shivasanthosh/Achievements/blob/3600f784dd89931b59141314477a2ba5d57fdc9f/README.md")),
         new Project(
             Name: "ReportWriter Desktop Application",
             Icon: "fa-file-lines",
@@ -72,5 +73,6 @@ public partial class Home
         string Description,
         string[] Tags,
         bool Featured,
-        string? Note = null);
+        string? Note = null,
+        (string Label, string Href)? Url = null);
 }

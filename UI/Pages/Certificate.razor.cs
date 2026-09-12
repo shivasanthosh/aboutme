@@ -31,7 +31,7 @@ public partial class Certificate
                     "Package Management",
                     "Release Strategy Design"
                 },
-                CredlyUrl = "https://www.credly.com/users/shivasanthoshkumar"
+                CredlyUrl = "https://www.credly.com/badges/b6ecb375-6bad-4ba3-a621-4bfafcd50f4f/public_url"
             },
             "az204" => new CertificateDetail
             {
@@ -50,7 +50,7 @@ public partial class Certificate
                     "Azure Security Implementation",
                     "Monitoring and Optimization"
                 },
-                CredlyUrl = "https://www.credly.com/users/shivasanthoshkumar"
+                CredlyUrl = "https://www.credly.com/badges/7ff91383-901b-493e-b8cc-fcffab306ff6"
             },
             "az900" => new CertificateDetail
             {
@@ -67,7 +67,7 @@ public partial class Certificate
                     "Security & Privacy",
                     "Azure Pricing & Support"
                 },
-                CredlyUrl = "https://www.credly.com/users/shivasanthoshkumar"
+                CredlyUrl = "https://www.credly.com/badges/2a82bf49-fe81-4faf-a22a-2ba87fefda26"
             },
             "deloitte-ai" => new CertificateDetail
             {
@@ -101,7 +101,23 @@ public partial class Certificate
                     "Team & Technical Agility",
                     "Built-in Quality Practices",
                     "DevOps Implementation"
-                }
+                },
+                CredlyUrl = "https://www.credly.com/earner/earned/badge/61123942-a068-45e5-98be-1f078245a222"
+            },
+            "pm-course" => new CertificateDetail
+            {
+                Title = "Project Management Course",
+                Subtitle = "Udemy, via Cognizant",
+                PackageId = "ProjectManagement.Fundamentals",
+                Version = "1.0.0",
+                Description = "Completed a project management fundamentals course covering planning, scheduling, risk, and stakeholder management, sponsored by Cognizant Technology Solutions.",
+                Skills = new[]
+                {
+                    "Project Planning & Scheduling",
+                    "Risk Management",
+                    "Stakeholder Management"
+                },
+                CredlyUrl = "https://cognizant.udemy.com/certificate/UC-28ac103f-4380-4c63-8c04-bd996ede7a38/"
             },
             _ => throw new ArgumentException($"Certificate with ID '{Id}' not found.")
         };
@@ -114,7 +130,8 @@ public class CertificateDetail
     public string Subtitle { get; set; } = string.Empty;
     public string PackageId { get; set; } = string.Empty;
     public string Version { get; set; } = "1.0.0";
-    public string ImageUrl { get; set; } = string.Empty;
+    /// <summary>Optional — some certs (e.g. course completions) have no certificate image.</summary>
+    public string? ImageUrl { get; set; }
     public string? Description { get; set; }
     public string[]? Skills { get; set; }
     public string? CredlyUrl { get; set; }
