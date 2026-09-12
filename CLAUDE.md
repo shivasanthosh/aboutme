@@ -21,7 +21,7 @@ Deployment is automatic: `.github/workflows/deploy.yml` publishes on every push 
 ## Architecture
 
 - `UI/` is the only project (`aboutme.sln` wraps it). `Program.cs` is stock Blazor WASM bootstrap.
-- **Routing/base path:** `wwwroot/index.html` and `wwwroot/404.html` both set `<base href="/aboutme/">`. GitHub Pages serves `404.html` for deep links, which boots the app and lets the Blazor router resolve the path. Consequences:
+- **Routing/base path:** the site is served under `/aboutme/` on GitHub Pages. GitHub Pages serves `404.html` for deep links, which boots the app and lets the Blazor router resolve the path. Consequences:
   - In-app links must be **relative** (`href="certificate/az400"`, `href=""` for home) — never `href="/"`, which escapes to the domain root.
   - Source keeps `<base href="/">` so `dotnet run` works at `http://localhost:5217/`; the deploy workflow `sed`s it to `/aboutme/` in the published `index.html`/`404.html`. Never hard-code `/aboutme/` in source.
 - **Pages:** `Pages/Home.razor` is a single long-scroll page with anchor sections (`#about`, `#skills`, `#certifications`, `#experience`, `#projects`, `#achievements`, `#contact`). `Pages/Certificate.razor` (`/certificate/{Id}`) is the only other route; its content comes from a `switch` on `Id` in `Certificate.razor.cs`. Adding a certificate means adding a card in `Home.razor` **and** a case in that switch.
