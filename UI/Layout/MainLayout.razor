@@ -1,9 +1,11 @@
 @inherits LayoutComponentBase
 
-<div id="wrapper" class="landing-page">
-    <div id="page-wrapper" class="gray-bg">
-        <div class="wrapper wrapper-content">
-            @Body
-        </div>
-    </div>
+<TopNav />
+
+<div class="container">
+    @Body
 </div>
+
+<footer class="ide-footer">
+    <span class="cm">// &copy; @DateTime.Now.Year Shivasanthoshkumar Sivakumar — built with Blazor, deployed to GitHub Pages</span>
+</footer>

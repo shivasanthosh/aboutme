@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Routing;
 
 namespace UI.Pages;
 
@@ -7,11 +6,9 @@ public partial class Home
 {
     [Inject]
     private NavigationManager NavigationManager { get; set; } = default!;
+
     private bool showPdfModal;
     private string? currentPdfUrl;
-    private bool showImageModal;
-    private string? currentImageUrl;
-    private string? currentImageTitle;
 
     private void ShowPdf(string pdfUrl)
     {
@@ -26,24 +23,54 @@ public partial class Home
         currentPdfUrl = null;
     }
 
-    private void ShowImageModal(string imageUrl, string title)
-    {
-        currentImageUrl = imageUrl;
-        currentImageTitle = title;
-        showImageModal = true;
-        StateHasChanged();
-    }
-
-    private void CloseImageModal()
-    {
-        showImageModal = false;
-        currentImageUrl = null;
-        currentImageTitle = null;
-        StateHasChanged();
-    }
-
     private void NavigateToCertificate(string certificateId)
     {
         NavigationManager.NavigateTo($"certificate/{certificateId}");
     }
+
+    /// <summary>
+    /// Add a new project here — the grid renders whatever this list contains,
+    /// featured ones first. No markup changes needed elsewhere.
+    /// </summary>
+    private static readonly IReadOnlyList<Project> Projects = new[]
+    {
+        new Project(
+            Name: "Enterprise Lakehouse Platform",
+            Icon: "fa-database",
+            Org: "Deloitte USI",
+            Description: "Ingests 10+ heterogeneous sources (Blob, S3, DynamoDB, Excel, JSON, SQL) into Microsoft Fabric OneLake through a bronze → silver → gold medallion architecture. Gold-layer schemas power 15+ production Power BI reports.",
+            Tags: new[] { "microsoft-fabric", "onelake", "pyspark", "power-bi", "terraform", "ci-cd", "key-vault" },
+            Featured: true),
+        new Project(
+            Name: "AI Data Assistant",
+            Icon: "fa-robot",
+            Org: "Deloitte USI",
+            Description: "Chatbot experience over the Lakehouse's gold layer: an Azure Function App exposes the data through MCP for other app teams, and AWS Bedrock answers natural-language queries surfaced through a Blazor chat UI.",
+            Tags: new[] { "aws-bedrock", "mcp", "azure-functions", "blazor", "rag" },
+            Featured: true,
+            Note: "Built on top of the Enterprise Lakehouse Platform above."),
+        new Project(
+            Name: "SmartSeller",
+            Icon: "fa-mobile-screen",
+            Org: null,
+            Description: "Multi-platform order automation: a console app processing multi-order flows via Flipkart Seller APIs, plus a Xamarin.Forms mobile app for order tracking.",
+            Tags: new[] { "csharp", "dotnet-core", "xamarin" },
+            Featured: false),
+        new Project(
+            Name: "ReportWriter Desktop Application",
+            Icon: "fa-file-lines",
+            Org: null,
+            Description: "WPF/MVVM document-generation tool integrated with the FileMaker API for data-driven report output.",
+            Tags: new[] { "wpf", "xaml", "filemaker-api" },
+            Featured: false),
+    };
+
+    private record Project(
+        string Name,
+        string Icon,
+        string? Org,
+        string Description,
+        string[] Tags,
+        bool Featured,
+        string? Note = null);
 }

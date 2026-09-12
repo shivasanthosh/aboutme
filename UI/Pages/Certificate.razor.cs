@@ -17,6 +17,8 @@ public partial class Certificate
             {
                 Title = "Azure DevOps Engineer Expert",
                 Subtitle = "AZ-400",
+                PackageId = "Azure.DevOps.Engineer.Expert",
+                Version = "1.0.0",
                 ImageUrl = "Images/Az400.png",
                 Description = "Microsoft Certified: Azure DevOps Engineer Expert certification validates the skills and knowledge required to design and implement DevOps practices for Azure.",
                 Skills = new[]
@@ -35,6 +37,8 @@ public partial class Certificate
             {
                 Title = "Azure Developer Associate",
                 Subtitle = "AZ-204",
+                PackageId = "Azure.Developer.Associate",
+                Version = "1.0.0",
                 ImageUrl = "Images/az204.png",
                 Description = "Microsoft Certified: Azure Developer Associate certification demonstrates your ability to design, build, test, and maintain cloud solutions.",
                 Skills = new[]
@@ -52,6 +56,8 @@ public partial class Certificate
             {
                 Title = "Azure Fundamentals",
                 Subtitle = "AZ-900",
+                PackageId = "Azure.Fundamentals",
+                Version = "1.0.0",
                 ImageUrl = "Images/Az900.png",
                 Description = "Microsoft Certified: Azure Fundamentals validates foundational knowledge of cloud services and how those services are provided with Microsoft Azure.",
                 Skills = new[]
@@ -67,6 +73,8 @@ public partial class Certificate
             {
                 Title = "Deloitte AI Academy",
                 Subtitle = "EP Data Analyst",
+                PackageId = "Deloitte.AI.Academy.DataAnalyst",
+                Version = "1.0.0",
                 ImageUrl = "Images/DeloitteAiAcademyEPDataAnalyst.png",
                 Description = "Successfully completed the Deloitte AI Academy™ Experienced Professionals Program: Data Analyst",
                 Skills = new[]
@@ -82,6 +90,8 @@ public partial class Certificate
             {
                 Title = "SAFe® 6.0 Practitioner",
                 Subtitle = "Scaled Agile Framework",
+                PackageId = "SAFe.Practitioner",
+                Version = "6.0.0",
                 ImageUrl = "Images/Safe6.png",
                 Description = "Certified SAFe® 6.0 Practitioner with expertise in implementing Agile practices at enterprise scale.",
                 Skills = new[]
@@ -102,6 +112,8 @@ public class CertificateDetail
 {
     public string Title { get; set; } = string.Empty;
     public string Subtitle { get; set; } = string.Empty;
+    public string PackageId { get; set; } = string.Empty;
+    public string Version { get; set; } = "1.0.0";
     public string ImageUrl { get; set; } = string.Empty;
     public string? Description { get; set; }
     public string[]? Skills { get; set; }
