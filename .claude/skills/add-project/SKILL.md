@@ -58,10 +58,22 @@ new sections.
    `\location` with a `\faIcon{link}` href, a `tightemize` list, a bold Tech Stack line,
    `\sectionsep`). If yes, add it last, right before `\end{minipage}`.
 
+   **Known failure mode — silent clipping, not a compile error:** the right-column
+   content sits in a `\begin{minipage}[t]{0.66\textwidth}`. A minipage does **not**
+   paginate — if its content ends up taller than one page, the overflow is cut off
+   silently. The "Compile resume PDF" CI step goes green either way, so a green run does
+   **not** mean the new entry actually rendered. After pushing, **fetch the deployed PDF
+   and read it** (`curl -s -o /tmp/resume-check.pdf https://shivasanthosh.github.io/aboutme/resume.pdf`
+   with a cache-bust if needed, then Read it) and confirm the new `\runsubsection` text is
+   actually visible on the page. If it isn't, don't leave it half-applied — either trim
+   something (ask the user what) or revert the `.tex` addition and keep the project on the
+   site/CONTEXT.md only, and say so.
+
 6. **Build to verify**: `dotnet build UI/UI.csproj` — must succeed with 0 errors.
 
-7. Report what was added and where (including whether the `.tex` was touched), and flag
-   anything inferred (icon choice, tags, Featured/Org) so the user can adjust.
+7. Report what was added and where (including whether the `.tex` was touched and, if so,
+   confirmed visible in the deployed PDF), and flag anything inferred (icon choice, tags,
+   Featured/Org) so the user can adjust.
 
 ## Notes
 
