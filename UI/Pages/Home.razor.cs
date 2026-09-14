@@ -71,6 +71,14 @@ public partial class Home
             Description: "WPF/MVVM document-generation tool integrated with the FileMaker API for data-driven report output.",
             Tags: new[] { "wpf", "xaml", "filemaker-api" },
             Featured: false),
+        new Project(
+            Name: "Job Tracker",
+            Icon: "fa-briefcase",
+            Org: null,
+            Description: "Personal job-application tracker: a Blazor WebAssembly SPA with Google sign-in and a realtime Firestore backend, called directly from the browser with no custom backend.",
+            Tags: new[] { "blazor-wasm", "firebase", "firestore", "google-auth", "github-pages" },
+            Featured: false,
+            Url: ("Live app", "https://shivasanthosh.github.io/job-tracker/")),
     };
 
     private record Project(

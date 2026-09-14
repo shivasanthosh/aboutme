@@ -125,6 +125,12 @@ WPF/MVVM document-generation tool integrated with the FileMaker API for data-dri
 report output. 8 months.
 Tags: `wpf` `xaml` `filemaker-api`
 
+### Job Tracker
+Personal job-application tracker: a Blazor WebAssembly SPA with Google sign-in and a
+realtime Firestore backend, called directly from the browser with no custom backend.
+Demo: [live app](https://shivasanthosh.github.io/job-tracker/)
+Tags: `blazor-wasm` `firebase` `firestore` `google-auth` `github-pages`
+
 ## Achievements
 
 - **Applause Award — 2026:** for contributions to GISCO, recognized for going the extra mile.
